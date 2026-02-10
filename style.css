@@ -1418,3 +1418,26 @@ p { color: var(--text-soft); }
 .nav-links a:hover::before {
   height: 100%;
 }
+
+/* SCROLL TO TOP BUTTON */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: #ff7a00;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  z-index: 9999;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  transform: translateY(-3px);
+}

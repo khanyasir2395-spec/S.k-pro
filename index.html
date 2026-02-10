@@ -363,6 +363,26 @@ menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 </script>
+<!-- SCROLL TO TOP -->
+<button id="scrollTopBtn">↑</button>
+<script>
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
 
 
 </body>

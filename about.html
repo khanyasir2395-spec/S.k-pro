@@ -152,6 +152,57 @@
   <span class="icon">💬</span>
   <span class="label">Chat</span>
 </a>
+<script>
+  const slides = document.querySelectorAll(".hero-slide");
+  const dots = document.querySelectorAll(".hero-dots .dot");
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+    current = index;
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => showSlide(index));
+  });
+
+  setInterval(() => {
+    let next = (current + 1) % slides.length;
+    showSlide(next);
+  }, 5000);
+</script>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+<!-- SCROLL TO TOP -->
+<button id="scrollTopBtn">↑</button>
+ <script>
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
 
 
 </body>
