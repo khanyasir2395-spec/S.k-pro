@@ -13,67 +13,59 @@
 <body>
 
   
-    <!-- HERO SECTION -->
- <header class="hero">
-  <nav class="navbar">
-    <div class="logo">S.K PRO </div>
+   <!-- ===== NAVBAR ===== -->
+<header class="site-header">
 
-    <ul class="nav-links">
+  <nav class="navbar">
+    <div class="logo">S.K.PRO SPEAKERS</div>
+
+    <ul class="nav-links" id="navLinks">
       <li><a href="#products">Products</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="btn">Contact</a></li>
     </ul>
-  </nav>
- <header class="hero hero-slider">
 
-  <div class="hero-slide active" style="background-image:url('assets/images/skpro1-hero.jpg')">
+    <div class="menu-toggle" id="menuToggle">☰</div>
+  </nav>
+
+</header>
+
+
+<!-- ===== HERO SLIDER ===== -->
+<section class="hero-slider">
+
+  <!-- Slide 1 -->
+  <div class="hero-slide active"
+       style="background-image:url('assets/images/skpro-hero.jpg')">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-text">
         <h1>Powerful Sound.<br>Professional Performance.</h1>
-        <p>Built for DJs, sound owners, and event professionals.</p>
+        <p>Built for DJs & sound businesses.</p>
       </div>
     </div>
   </div>
 
-  <div class="hero-slide" style="background-image:url('assets/images/dancing1.jpg')">
+  <!-- Slide 2 -->
+  <div class="hero-slide"
+       style="background-image:url('assets/images/dancing1.jpg')">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-text">
         <h1>Strong Bass.<br>Clean Output.</h1>
-        <p>Tested speakers with real-world performance.</p>
+        <p>Tested speakers with real performance.</p>
       </div>
     </div>
   </div>
 
-  <div class="hero-slide" style="background-image:url('assets/images/dancing2.jpg')">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Made for Business.</h1>
-        <p>Bulk supply with consistent sound quality.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-slide" style="background-image:url('assets/images/village4.jpg')">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Trusted Offline.</h1>
-        <p>Live demo and testing at our Kolkata store.</p>
-      </div>
-    </div>
-  </div>
-
+  <!-- Dots -->
   <div class="hero-dots">
-  <span class="dot active"></span>
-  <span class="dot"></span>
-  <span class="dot"></span>
-  <span class="dot"></span>
-</div>
+    <span class="dot active"></span>
+    <span class="dot"></span>
+  </div>
 
-</header>
+</section>
+
 
 
 <section class="about-skpro-detail">
@@ -352,6 +344,14 @@
     let next = (current + 1) % slides.length;
     showSlide(next);
   }, 5000);
+</script>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
 </script>
 
 
