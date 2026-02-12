@@ -15,7 +15,8 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar">
+  <ul class="nav-links" id="navLinks">
+
     <div class="logo">S.K PRO SPEAKERS</div>
 
     <ul class="nav-links">
@@ -110,14 +111,20 @@
     showSlide(next);
   }, 5000);
 </script>
-<script>
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
 });
 </script>
+
 <!-- SCROLL TO TOP -->
 <button id="scrollTopBtn">↑</button>
   <script>
