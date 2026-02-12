@@ -11,14 +11,11 @@
 
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  
-
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <ul class="nav-links" >
-
+  <nav class="navbar">
     <div class="logo">S.K PRO SPEAKERS</div>
 
     <ul class="nav-links">
@@ -26,7 +23,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
-    
+    <div class="menu-toggle" id="menuToggle">☰</div>
   </nav>
 
   <!-- CONTACT HERO -->
@@ -113,8 +110,14 @@
     showSlide(next);
   }, 5000);
 </script>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
-
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
 <!-- SCROLL TO TOP -->
 <button id="scrollTopBtn">↑</button>
   <script>
